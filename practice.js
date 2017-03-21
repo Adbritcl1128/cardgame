@@ -1,18 +1,14 @@
-let cardValues = [2,3,4,5,6,7,8,9,10,'J','Q','K','A'];
+let cardValues = [2,3,4,5,6,7,8,9,10,11,12,13,14];
 
 module.exports = function cardDeck () {
     let deck = [];
 
     for (let i=0; i<4; i++) {
-      deck = deck.concat(deck[Math.floor(Math.random()*deck.length)]);
+      deck = deck.concat(cardValues);
   }
 
     return deck;
 };
-
-
-
-
 
 
 
