@@ -1,29 +1,39 @@
 
 
 module.exports = function cardDeck () {
-  let shuffleDeck = [];
   let cardValues = [2,3,4,5,6,7,8,9,10,'J','Q','K','A'];
-  let card = 1;
+    let shuffleAr = [];
+    let card = 1;
 
-  for (let i=0; i<52; i++) {
-    deck = deck.concat(deck[Math.floor(Math.random()*deck.length)]);
-
-    if(card === 11){
-      shuffleAr.push('J');
-    }else if (card === 12){
-      shuffleAr.push('Q');
-    }else if (card === 13) {
-      shuffleAr.push('K');
-    }else if (card === 14){
-      shuffleAr.push('A');
-    }else {
-      shuffleAr.push(card);
+    for (let j=0;j<13;j++){
+      card ++;
+      for( let i=0; i <4; i++){
+        if (card === 11){
+          shuffleAr.push('J');
+        }else if (card === 12){
+          shuffleAr.push('Q');
+        }else if (card === 13) {
+          shuffleAr.push('K');
+        }else if (card === 14){
+          shuffleAr.push('A');
+        }else {
+          shuffleAr.push(card);
+        }
+      }
     }
-  }
 
-  return (shuffleDeck);
-};
+    let exchange;
+    let temporary;
 
+    for (let a = shuffleAr.length - 1; a > 0; a--) {
+      exchange = Math.floor(Math.random() * a);
+      temporary = shuffleAr[a];
+      shuffleAr[a] = shuffleAr[exchange];
+      shuffleAr[exchange] = temporary;
+    }
+
+    return (shuffleAr);
+  };
 
 
 
