@@ -79,25 +79,3 @@ module.exports = function war([player1, player2]){
 //
 //       numberOfWinsForPlayerTwo++;
 //     } else {
-//
-//       numberOfTies++;
-//     }
-//   }
-//
-//   return {
-//     date: gameDate,
-//     players: [
-//       {
-//         name: players[0],
-//         numberOfWins: numberOfWinsForPlayerOne,
-//         winRatio: numberOfWinsForPlayerOne / 26
-//       },
-//       {
-//         name: players[1],
-//         numberOfWins: numberOfWinsForPlayerTwo,
-//         winRatio: numberOfWinsForPlayerTwo / 26
-//       }
-//     ],
-//     numberOfTies: numberOfTies
-//   };
-// };
